@@ -332,7 +332,7 @@ const popupmodel = (type) => {
   });
 };
 
-window.addEventListener("dblclick", (e) => {
+window.addEventListener("click", (e) => {
   const X = (e.clientX / window.innerWidth) * 2 - 1;
   const Y = -(e.clientY / window.innerHeight) * 2 + 1;
 
