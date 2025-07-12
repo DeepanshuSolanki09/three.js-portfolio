@@ -53,6 +53,7 @@ gsap.from(heading, {
 
 tl.to(loader, {
   scale: 0.98,
+  yoyo: true,
   duration: 3,
   delay: 2,
   ease: "power3.inOut",
@@ -155,12 +156,12 @@ const mouse = new THREE.Vector2();
 
 //font->test
 //base
-const basegeo = new THREE.BoxGeometry(10, 8, 0);
+const basegeo = new THREE.BoxGeometry(10, 8, 1);
 const basemal = new THREE.MeshBasicMaterial();
 const base = new THREE.Mesh(basegeo, basemal);
 scene.add(base);
-base.position.set(17, 0.01, -1);
-base.rotateX(-Math.PI / 2);
+base.position.set(17, 8, -8.5);
+// base.rotateX(-Math.PI / 2);
 base.scale.set(2, 2, 2);
 
 //font
@@ -178,9 +179,9 @@ Fontloader.load("/helvetiker_regular.typeface.json", (font) => {
 
   const material = new THREE.MeshBasicMaterial({ color: "black" });
   const text1 = new THREE.Mesh(textloader, material);
-  text1.rotateX(-Math.PI / 2);
-  text1.position.y = -49.9;
-  text1.position.z = -1;
+  // text1.rotateX(-Math.PI / 2);
+  text1.position.y = 10;
+  text1.position.z = -57;
   text1.position.x = 9;
   text1.userData = { type: "text1" };
   scene.add(text1);
@@ -198,9 +199,9 @@ Fontloader.load("/helvetiker_regular.typeface.json", (font) => {
 
   const material = new THREE.MeshBasicMaterial({ color: "black" });
   const text2 = new THREE.Mesh(textloader, material);
-  text2.rotateX(-Math.PI / 2);
-  text2.position.y = -50;
-  text2.position.z = 1.5;
+  // text2.rotateX(-Math.PI / 2);
+  text2.position.y = 6;
+  text2.position.z = -57.5;
   text2.position.x = 9;
   text2.userData = { type: "text2" };
   checkarray.push(text2);
@@ -219,9 +220,9 @@ Fontloader.load("/helvetiker_regular.typeface.json", (font) => {
 
   const material = new THREE.MeshBasicMaterial({ color: "black" });
   const text3 = new THREE.Mesh(textloader, material);
-  text3.rotateX(-Math.PI / 2);
-  text3.position.y = -50;
-  text3.position.z = 3;
+  // text3.rotateX(-Math.PI / 2);
+  text3.position.y = 4;
+  text3.position.z = -57.5;
   text3.position.x = 9;
   text3.userData = { type: "text3" };
   checkarray.push(text3);
@@ -240,9 +241,9 @@ Fontloader.load("/helvetiker_regular.typeface.json", (font) => {
 
   const material = new THREE.MeshBasicMaterial({ color: "black" });
   const text4 = new THREE.Mesh(textloader, material);
-  text4.rotateX(-Math.PI / 2);
-  text4.position.y = -50;
-  text4.position.z = 4.5;
+  // text4.rotateX(-Math.PI / 2);
+  text4.position.y = 2;
+  text4.position.z = -57.5;
   text4.position.x = 9;
   text4.userData = { type: "text4" };
   checkarray.push(text4);
